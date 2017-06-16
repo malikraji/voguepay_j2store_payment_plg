@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="j2store" method="upgrade">
+	<name>VoguePay Payments</name>
+	<version>1.0</version>
+	<creationDate>June 2017</creationDate>
+	<author>Malik Raji</author>
+	<authorEmail>amiraj0000@gmail.com</authorEmail>
+	<authorUrl> https://www.voguepay.com</authorUrl>
+	<copyright>2017 VoguePay</copyright>
+	<license>The MIT License (MIT)</license>
+	<description>Voguepay Payments</description>
+	<files>
+		<filename plugin="payment_voguepay">payment_voguepay.php</filename>
+		<folder>payment_voguepay</folder>
+		<folder>lib</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">languages/en-GB.plg_j2store_payment_voguepay.ini</language>
+		<language tag="en-GB">languages/en-GB.plg_j2store_payment_voguepay.sys.ini</language>
+	</languages>
+	<config>
+	<fields name="params">
+		<fieldset name="basic">
+		 
+          <field type="spacer" name="myspacer0" class="text" label="My Store Details" />		
+		  <field name="messageee1" label="My Store Settings" type="hidden" value=""/>
+		  <field name="my_store_name"  type="text"  size="30" label="mal_voguepay_display_name"  description="mal_voguepay_display_name_desc" />
+		  <field name="trans_state" type="radio" default="demo" label="mal_voguepay_trans_state" description="mal_voguepay_trans_state_desc">
+          <option value="demo">Demo  </option>
+          <option value="live">Live    </option>
+          </field>
+
+          <field type="spacer" name="myspacer1" class="text" label="VoguePay Merchant details" />	
+          <field name="my_merchant_id" type="text" size="30" default="" label="mal_voguepay_merchant_id"  description="mal_voguepay_merchant_id_desc"/>
+          <field type="spacer" />
+		  <!-- Merchant's store currency -->
+		  <field name="my_store_currency" type="radio" default="NGN" label="mal_voguepay_store_currency" description="mal_voguepay_store_currency_desc">
+          <option value="EUR">EUR  </option>
+          <option value="GBP">GBP   </option>
+          <option value="GHS">GHS  </option>
+          <option value="NGN">NGN    </option>
+          <option value="USD">USD  </option>
+          <option value="ZAR">ZAR    </option>
+          </field>          
+
+          <field type="spacer" name="myspacer2" class="text" label="Display Messages" />		
+          <!--Message Settings <br-->
+          <field name="afterpayment" type="textarea" cols="10" rows="4" default="" label="mal_voguepay_after_payment" description="mal_voguepay_after_payment_desc"/>
+          <field name="errorpayment" type="textarea" cols="10" rows="5" default="" label="mal_voguepay_error_payment" description="mal_voguepay_error_payment_desc"/>
+          <field name="cancelpayment" type="textarea" cols="10" rows="5" default="" label="mal_voguepay_cancel_payment" description="mal_voguepay_cancel_payment_desc"/>
+
+          <field type="spacer" name="myspacer3" class="text" label="For Developers Only!" />		
+          <field name="my_developer_code"  type="text"  size="30" label="mal_voguepay_developer_code"  description="mal_voguepay_developer_code_desc" />
+        
+		</fieldset>
+	</fields>
+  </config>				
+</extension>
