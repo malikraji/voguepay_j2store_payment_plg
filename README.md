@@ -1,8 +1,9 @@
-j2store-paysbuy-payment
+voguepay_j2store_payment_plg
 =======================
 
-Joomla Payment Plugin for J2Store
+Joomla J2Store Payment Plugin for VoguePay
 
 Just clone to your desktop > pack to .zip > Install to Joomla :)
 
-Support for Joomla 2.5 and 3.x# voguepay_j2store_payment_plg
+Support for Joomla 3.x# voguepay_j2store_payment_plg
+
